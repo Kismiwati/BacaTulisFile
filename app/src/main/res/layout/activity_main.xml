@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--atribut id digunakan untuk memberikan nama pada textview,
+    atribut teks digunakan untuk menampilkan teks "file name",
+    atribut textAppearance digunakan untuk mengubah ukuran teks yang digunakan untuk heading,
+    atribut margin digunakan untuk mengatur jarak antara view dari satu objek ke objek yang lain
+    atribut align digunakan untuk mengatur perataan teks baik rata kiri, rata kanan, rata tengah.
+    -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="117dp"
+        android:text="@string/file_name"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <!--atribut id digunakan untuk memberikan nama pada EditText(editFile),
+    atribut align digunakan untuk mengatur perataan teks baik rata kiri, rata kanan, rata tengah.
+    atribut margin digunakan untuk mengatur jarak antara view dari satu objek ke objek yang lain
+    atribut hint digunakan untuk memberikan petunjuk kepada pengguna apa yang akan diisi,
+    atribut inputType digunakan untuk mengatur jenis inputan ayang akan dilakukan oleh pengguna,
+    -->
+    <EditText
+        android:id="@+id/editFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignStart="@+id/btnSave"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginStart="31dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/file_name2"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:textColorHint="#757575"
+        tools:ignore="RtlSymmetry" />
+
+    <!--atribut id digunakan untuk memberikan nama pada textview,
+    atribut teks digunakan untuk menampilkan teks "file data",
+    atribut textAppearance digunakan untuk mengubah ukuran teks yang digunakan untuk heading,
+    atribut margin digunakan untuk mengatur jarak antara view dari satu objek ke objek yang lain
+    atribut align digunakan untuk mengatur perataan teks baik rata kiri, rata kanan, rata tengah.
+    -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="67dp"
+        android:text="@string/file_data"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <!--atribut id digunakan untuk memberikan nama pada EditText(editData),
+    atribut align digunakan untuk mengatur perataan teks baik rata kiri, rata kanan, rata tengah.
+    atribut margin digunakan untuk mengatur jarak antara view dari satu objek ke objek yang lain
+    atribut hint digunakan untuk memberikan petunjuk kepada pengguna apa yang akan diisi,
+    atribut inputType digunakan untuk mengatur jenis inputan ayang akan dilakukan oleh pengguna,
+    -->
+    <EditText
+        android:id="@+id/editData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignStart="@+id/editFile"
+        android:layout_alignBottom="@+id/textView2"
+        android:ems="10"
+        android:hint="@string/data"
+        android:importantForAutofill="no"
+        android:inputType="textWebEditText"
+        android:lines="5"
+        android:minHeight="48dp" />
+
+    <!--atribut id digunakan untuk memberikan nama pada Button(btnSave),
+    atribut align digunakan untuk mengatur perataan teks baik rata kiri, rata kanan, rata tengah.
+    atribut margin digunakan untuk mengatur jarak antara view dari satu objek ke objek yang lain
+    atribut teks digunakan untuk menampilkan teks "save",
+    -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginBottom="53dp"
+        android:layout_marginStart="49dp"
+        android:text="@string/save" />
+
+    <!--atribut id digunakan untuk memberikan nama pada Button(btnView),
+    atribut align digunakan untuk mengatur perataan teks baik rata kiri, rata kanan, rata tengah.
+    atribut margin digunakan untuk mengatur jarak antara view dari satu objek ke objek yang lain
+    atribut teks digunakan untuk menampilkan teks "view",
+    -->
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editData"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_marginEnd="33dp"
+        android:text="@string/view" />
+</RelativeLayout>
